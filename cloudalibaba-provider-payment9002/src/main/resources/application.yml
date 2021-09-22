@@ -1,0 +1,19 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:80 #nacos 集群， 通过nainx转发
+#        server-addr: localhost:8848 #nacos 单机
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
